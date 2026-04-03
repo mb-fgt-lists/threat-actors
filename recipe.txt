@@ -2,6 +2,10 @@
 # Workaround for Fortinet stupidities
 #####
 
+# It takes the firewall [Update Interval] + maximum 30 minutes to re-evaluate address lists.
+# So changes are not immediate.
+# Example: 30 minutes update interval -> maximum of 60 minutes until changes become effective
+
 #
 # AUTOMATED PARTS
 #
