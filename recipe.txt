@@ -2,8 +2,9 @@
 # Workaround for Fortinet stupidities
 #####
 
-
-
+#
+# AUTOMATED PARTS
+#
 ## BLOCK PARKLOGIC.COM FROM BEING RESOLVED
 config system dns-database
     edit "parklogic.com"
@@ -28,15 +29,6 @@ config firewall address
         set type fqdn
         set allow-routing enable
         set fqdn "*.parklogic.com"
-    next
-end
-
-config router static
-    edit 0
-        set distance 3
-        set blackhole enable
-        set dstaddr "wildcard.parklogic.com"
-        set vrf 0
     next
 end
 
@@ -72,6 +64,22 @@ set action deny
 set logtraffic disable 
 set service ALL
 next
+
+#######################################################
+
+#
+# MANUAL STEPS
+#
+
+## Reports conflict with SDWAN
+config router static
+    edit 0
+        set distance 3
+        set blackhole enable
+        set dstaddr "wildcard.parklogic.com"
+        set vrf 0
+    next
+end
 
 ## HERE YOU NEED TO LOOKUP THE ID OF THE POLICY (eg. "show")
 move [ID OF BLOCK POLICY] before [ID OF FIRST POLICY] # when you hit [TAB] after "before" you get the list of IDs the topmost ist the first
