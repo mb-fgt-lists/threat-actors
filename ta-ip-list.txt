@@ -7,6 +7,8 @@
 159.253.120.2
 193.187.148.169
 23.227.202.14
+# goooooooooooooooooooooooooooooooooooooooooooooooooooooooooogle.com
+208.91.112.55
 # example.com
 #2606:4700::6812:1b78
 #2606:4700::6812:1a78
