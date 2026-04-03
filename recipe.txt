@@ -50,10 +50,12 @@ config system external-resource
     edit "FGT-MB-Domains"
         set type domain
         set category 192
+        set refresh-rate 30
         set resource "https://raw.githubusercontent.com/mb-fgt-lists/threat-actors/refs/heads/main/ta-domain-list.txt"
     next
     edit "FGT-MB-IPs"
         set type address
+        set refresh-rate 30
         set resource "https://raw.githubusercontent.com/mb-fgt-lists/threat-actors/refs/heads/main/ta-ip-list.txt"
     next
 end
