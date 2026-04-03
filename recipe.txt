@@ -40,6 +40,11 @@ config router static
     next
 end
 
+## ENABLE RE-EVALUATION OF ADDRESSES ON RELOAD OF THE LISTS
+config system settings
+set ext-resource-session-check enable
+end
+
 ## CONFIGURE BLOCKLISTS WE HOST ON GITHUB
 config system external-resource
     edit "FGT-MB-Domains"
